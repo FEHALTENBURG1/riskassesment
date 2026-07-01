@@ -1,0 +1,25 @@
+{
+  "name": "avaliacao-risco-toolkit",
+  "version": "1.0.0",
+  "description": "Calculadoras epidemiológicas e linha do tempo interativa — ferramenta de apoio à Ficha de Avaliação Rápida de Risco em Saúde Pública.",
+  "author": "Fernanda Haltenburg",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o assets/style.css --minify",
+    "build:js": "esbuild src/main.jsx --bundle --minify --outfile=assets/app.js --loader:.jsx=jsx --jsx=automatic --target=es2018",
+    "build": "npm run build:css && npm run build:js",
+    "watch:js": "esbuild src/main.jsx --bundle --outfile=assets/app.js --loader:.jsx=jsx --jsx=automatic --target=es2018 --watch",
+    "watch:css": "tailwindcss -i src/input.css -o assets/style.css --watch"
+  },
+  "dependencies": {
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "esbuild": "^0.28.1",
+    "tailwindcss": "^4.0.0"
+  }
+}
